@@ -4,7 +4,7 @@ def add_item():
     name = input("Enter item name: ")
     if name in inventory:
         print("Item already exists. Use edit option to update.")
-    return
+        return
     perishable_input = input("Is the item perishable? (yes/no): ").strip().lower()
     perishable = perishable_input == "yes"
     try:
