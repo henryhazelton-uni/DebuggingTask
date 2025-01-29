@@ -25,8 +25,7 @@ def view_inventory():
     print("\nCurrent Inventory:")
     for item, details in inventory.items():
         perishable_status = "Yes" if details["perishable"] else "No"
-        print(f"- {item}: Perishable: {perishable_status}, Qty: {details['qty']},
-        Description: {details['description']}")
+        printf("- {item}: Perishable: {perishable_status}, Qty: {details['qty']}, Description: {details['description']}")
     print()
 def edit_item():
     print("\nEdit item feature coming soon.\n")
