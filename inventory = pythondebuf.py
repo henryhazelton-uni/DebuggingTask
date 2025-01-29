@@ -8,10 +8,10 @@ def add_item():
     perishable_input = input("Is the item perishable? (yes/no): ").strip().lower()
     perishable = perishable_input == "yes"
     try:
-        qty = int(input("Enter quantity: ")).strip()
+        qty = int(input("Enter quantity: "))
     except ValueError:
         print("Invalid quantity. Please enter a number.")
-    return
+        return
     description = input("Enter item description: ").strip()
     inventory[name] = {
     "perishable": perishable,
