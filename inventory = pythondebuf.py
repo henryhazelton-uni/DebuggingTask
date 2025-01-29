@@ -23,12 +23,12 @@ def add_item():
 def view_inventory():
     if not inventory:
         print("\nInventory is empty.")
-    return
-    print("\nCurrent Inventory:")
+        return
+    print(f"\nCurrent Inventory:")
     for item, details in inventory.items():
         perishable_status = "Yes" if details["perishable"] else "No"
-        printf("- {item}: Perishable: {perishable_status}, Qty: {details['qty']}, Description: {details['description']}")
-    print()
+        print(f"- {item}: Perishable: {perishable_status}, Qty: {details['qty']}, Description: {details['description']}")
+
 
 def edit_item():
     print("\nEdit item feature coming soon.\n")
