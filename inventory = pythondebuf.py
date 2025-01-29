@@ -1,6 +1,7 @@
 inventory = {}
+
 def add_item():
-    name = input("Enter item name: ").str()
+    name = input("Enter item name: ")
     if name in inventory:
         print("Item already exists. Use edit option to update.")
     return
@@ -18,6 +19,7 @@ def add_item():
     "description": description
     }
     print(f"Item '{name}' added successfully.")
+
 def view_inventory():
     if not inventory:
         print("\nInventory is empty.")
@@ -27,10 +29,13 @@ def view_inventory():
         perishable_status = "Yes" if details["perishable"] else "No"
         printf("- {item}: Perishable: {perishable_status}, Qty: {details['qty']}, Description: {details['description']}")
     print()
+
 def edit_item():
     print("\nEdit item feature coming soon.\n")
+
 def remove_item():
     print("\nRemove item feature coming soon.\n")
+
 def main():
     while True:
         print("\nInventory Management System")
@@ -46,7 +51,7 @@ def main():
             add_item()
         elif choice == "3":
             edit_item()
-        elif choice == "3":
+        elif choice == "4":
             remove_item()
         elif choice == "5":
             print("Exiting Inventory System. Goodbye!")
